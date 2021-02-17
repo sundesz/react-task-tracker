@@ -13,8 +13,13 @@ export const getServerAddress = (id = null) => (
 
 // Fetch tasks
 export const fetchTasks = async() => {
-    const res = await fetch(getServerAddress())
-    const data = await res.json()
+    let data
+    try {
+        const res = await fetch(getServerAddress())
+        data = await res.json()
+    } catch(err) {
+        data = {}
+    }
 
     return data
 }

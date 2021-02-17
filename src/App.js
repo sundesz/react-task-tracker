@@ -35,7 +35,6 @@ function App() {
 
 
 
-
   return (
     <Router>
       <div className="container">
@@ -53,6 +52,7 @@ function App() {
         </Route>
 
         <Route path="/" exact>
+
           { showTaskForm && <AddTask /> }
 
           {
@@ -60,7 +60,15 @@ function App() {
             ?
             <Tasks />
             :
-            <h1 style={{textAlign: 'center'}} className="mb-3 mt-3">No Task</h1>
+            <div className="">
+              <h1 style={{textAlign: 'center'}} className="mb-3 mt-3">
+                No Task
+              </h1>
+              <h6 style={{textAlign: 'center'}} className="mb-3 mt-3">
+              Please run the server if not started (npm run server)
+              </h6>
+            </div>
+
           }
         </Route>
 
