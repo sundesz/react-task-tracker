@@ -1,13 +1,17 @@
-import React from 'react'
-import Task from './Task'
+import { useStateValue } from "../StateProvider"
+import Task from "./Task"
 
-const Tasks = ({tasks, onDelete, onRemainder}) => {
-    return(
-        <>
-            {tasks.map((task) => (
-                <Task key={task.id} task={task} onDelete={onDelete} onRemainder={onRemainder} />
-            ))}
-        </>
+
+const Tasks = () => {
+
+    const [{tasks}, dispatch] = useStateValue()
+
+    return (
+        <div className="tasks">
+            { tasks.map((task) =>
+                (<Task key={task.id} task={task} />)
+            )}
+        </div>
     )
 }
 

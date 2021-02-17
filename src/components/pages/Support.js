@@ -1,11 +1,11 @@
 import React from 'react'
 
-const About = () => {
+const Support = () => {
     return (
         <div className="py-5 text-center">
-            This is about page
+            This is Support page
         </div>
     )
 }
 
-export default About
+export default Support

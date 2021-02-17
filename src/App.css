@@ -1,0 +1,40 @@
+.task-remainder {
+  background-color: #28a745;
+}
+
+.task.card-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task.card-body .column__1 {
+  flex-basis: 5%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin-right: 20px;
+}
+
+.task [type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.task.card-body .column__2 {
+  flex: 1;
+  cursor: pointer;
+}
+
+.task.card-body .column__3 {
+  flex-basis: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.task__delete {
+  color: #ff0000;
+  font-size: 25px;
+  cursor: pointer;
+}
